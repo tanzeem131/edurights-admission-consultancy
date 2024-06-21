@@ -1,1 +1,0 @@
-# edurights-admission-consultancy
