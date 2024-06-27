@@ -71,7 +71,7 @@ const Review=()=> {
   return (
     <div className="lg:my-20 md:my-20 sm:my-10 vs:my-10">
         <div className="text-center font-bold lg:text-6xl md:text-6xl sm:text-3xl vs:text-3xl">
-            <p>Our Trusted Alumni ❤️</p>
+            <p className="border-[#D69527] border-4 border-l-0 border-r-0 w-fit p-2 mx-auto">Our Trusted Alumni ❤️</p>
         </div>
         <div className='w-3/4 m-auto'>
             <div className="lg:mt-20 md:mt-20 sm:mt-10 vs:mt-5">

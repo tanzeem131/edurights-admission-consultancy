@@ -1,5 +1,5 @@
 import React from 'react';
-import aboutVideo from '../image/about.mp4';
+import aboutVideo from '../image/aboutus.mp4';
 
 const About = () => {
   return (
@@ -11,7 +11,7 @@ const About = () => {
         </video>
       </div>
       <div className="w-full md:w-6/12">
-        <h2 className="font-bold text-4xl md:text-6xl my-5 text-center md:text-left vs:text-3xl">About Us</h2>
+        <h2 className="font-bold md:text-6xl my-5 text-center md:text-left sm:text-3xl vs:text-3xl border-[#D69527] border-4 border-l-0 border-r-0 w-fit p-2">About Us</h2>
         <p className="text-lg md:text-2xl text-justify md:text-left vs:text-sm ">
           Introducing Edurights Admission Consultancy, your trusted partner in educational advancement. With a steadfast presence of 5 years, Edurights specializes in facilitating admissions primarily for B.Ed, D.El.Ed, and Engineering courses. We understand the pivotal role education plays in shaping careers and futures. Our dedicated team of experts strives to ensure seamless admission processes, providing personalized guidance tailored to each student's aspirations. Whether you're embarking on your journey into teaching or pursuing engineering excellence, Edurights Admission Consultancy is here to navigate you towards a successful academic path.
         </p>

@@ -47,7 +47,7 @@ const ServiceCard = ({title,details,img})=>{
 const Service =()=> {
   return (
     <div>
-      <div className='md:text-6xl lg:text-6xl font-bold text-center mt-10 md:mb-20 sm:mb-15 vs:text-3xl vs:mb-5 sm:text-3xl'>Services</div>
+      <div className='md:text-6xl lg:text-6xl font-bold text-center mt-10 md:mb-20 sm:mb-15 vs:text-3xl vs:mb-5 sm:text-3xl border-[#D69527] border-4 border-l-0 border-r-0 w-fit mx-auto p-2'>Services</div>
       <div className='flex md:flex-nowrap lg:flex-nowrap sm:flex-wrap vs:flex-wrap md:w-[80%] mx-auto md:gap-16 vs:gap-4 vs:w-[70%]'>
         {serviceArr.map((service,index)=>(
           <ServiceCard key={index} title={service.title} details={service.details} img={service.img}/>

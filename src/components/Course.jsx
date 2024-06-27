@@ -40,7 +40,7 @@ const Course = () => {
                         <span className="relative text-white">Courses</span>
                     </span>
                 </div>
-                <div className="md:text-6xl lg:text-6xl sm:text-3xl vs:text-3xl font-bold">Explore Our Variety of Course Offerings</div>
+                <div className="md:text-6xl lg:text-6xl sm:text-3xl vs:text-3xl font-bold border-[#D69527] border-4 border-t-0 w-fit p-2">Explore Our Variety of Course Offerings</div>
             </div>
             <div className="flex flex-wrap md:gap-8 lg:gap-8 sm:gap-4 vs:gap-2 justify-center items-center">
                 {courses.map((course, index) => (
