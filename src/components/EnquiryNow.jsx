@@ -1,7 +1,56 @@
 import React, { useState } from "react";
+// import { API_KEY } from "../utils/constants";
 
 const Modal = () => {
   const [showModal, setShowModal] = useState(false);
+
+  const apiUrl = process.env.REACT_APP_EXCEL_API_KEY;
+
+  console.log("API URL: ", apiUrl);
+
+  const [formData, setFormData] = useState({
+    full_name: '',
+    email_id: '',
+    address: '',
+    contact_no: '',
+    message: ''
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    fetch(apiUrl,{
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ data: formData }),
+    })
+      .then((res) => {
+        if (res.status === 201) {
+          alert('Form Data Submitted :)');
+          setShowModal(false);
+        } else {
+          return res.json().then((data) => {
+            console.error('Error:', data);
+            alert('There was an error :(');
+          });
+        }
+      })
+      .catch((error) => {
+        console.error('Fetch error:', error);
+        alert('There was an error :(');
+      });
+  };
+
+
   return (
     <>
       <button
@@ -29,27 +78,33 @@ const Modal = () => {
                   </button>
                 </div>
                 <div className="relative p-6 flex-auto">
-                  <form className="bg-gray-200 shadow-md rounded px-8 pt-6 pb-8 w-full">
+                  <form onSubmit={handleSubmit} className="bg-gray-200 shadow-md rounded px-8 pt-6 pb-8 w-full">
                     <label className="block text-black text-sm font-bold mb-1">
                       Full Name
                     </label>
-                    <input className="shadow appearance-none border rounded w-full py-2 px-1 text-black" />
+                    <input name="full_name" value={formData.full_name} onChange={handleChange} required className="shadow appearance-none border rounded w-full py-2 px-1 text-black" />
                     <label className="block text-black text-sm font-bold mb-1">
                       Email Id
                     </label>
-                    <input className="shadow appearance-none border rounded w-full py-2 px-1 text-black" />
+                    <input name="email_id" value={formData.email_id} onChange={handleChange} required className="shadow appearance-none border rounded w-full py-2 px-1 text-black" />
                     <label className="block text-black text-sm font-bold mb-1">
                       Address
                     </label>
-                    <input className="shadow appearance-none border rounded w-full py-2 px-1 text-black" />
+                    <input name="address" value={formData.address} onChange={handleChange} required className="shadow appearance-none border rounded w-full py-2 px-1 text-black" />
                     <label className="block text-black text-sm font-bold mb-1">
                       Contact No.
                     </label>
-                    <input className="shadow appearance-none border rounded w-full py-2 px-1 text-black" />
+                    <input name="contact_no" value={formData.contact_no} onChange={handleChange} required className="shadow appearance-none border rounded w-full py-2 px-1 text-black" />
                     <label className="block text-black text-sm font-bold mb-1">
                       Message
                     </label>
-                    <input className="shadow appearance-none border rounded w-full py-2 px-1 text-black" />
+                    <input name="message" value={formData.message} onChange={handleChange} required className="shadow appearance-none border rounded w-full py-2 px-1 text-black" />
+                    <button
+                    className="text-white bg-yellow-500 active:bg-yellow-700 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
+                    type="submit"
+                  >
+                    Submit
+                  </button>
                   </form>
                 </div>
                 <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
@@ -60,13 +115,7 @@ const Modal = () => {
                   >
                     Close
                   </button>
-                  <button
-                    className="text-white bg-yellow-500 active:bg-yellow-700 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
-                    type="button"
-                    onClick={() => setShowModal(false)}
-                  >
-                    Submit
-                  </button>
+                  
                 </div>
               </div>
             </div>
