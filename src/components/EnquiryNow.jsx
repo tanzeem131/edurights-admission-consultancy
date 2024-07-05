@@ -1,12 +1,10 @@
 import React, { useState } from "react";
-// import { API_KEY } from "../utils/constants";
+import { API_KEY } from "../utils/constants";
 
 const Modal = () => {
   const [showModal, setShowModal] = useState(false);
 
-  const apiUrl = process.env.REACT_APP_EXCEL_API_KEY;
-
-  console.log("API URL: ", apiUrl);
+  const apiUrl = API_KEY;
 
   const [formData, setFormData] = useState({
     full_name: '',
@@ -49,7 +47,6 @@ const Modal = () => {
         alert('There was an error :(');
       });
   };
-
 
   return (
     <>
@@ -115,7 +112,6 @@ const Modal = () => {
                   >
                     Close
                   </button>
-                  
                 </div>
               </div>
             </div>
