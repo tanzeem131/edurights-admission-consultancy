@@ -6,6 +6,7 @@ import Service from './components/Service.jsx';
 import Course from './components/Course.jsx';
 import Review from './components/Review.jsx';
 import Modal from './components/EnquiryNow.jsx';
+import ContactUs from './components/ContactUs.jsx';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Service/>
       <Course/>
       <Review/>
+      <ContactUs/>
       <Modal/>
     </div>
   );
