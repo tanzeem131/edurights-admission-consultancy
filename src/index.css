@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 @layer base {
-    body {
-      @apply bg-gradient-to-r from-[#FFF9F2] to-[#D69527];
-    }
+  body {
+    @apply bg-gradient-to-r from-[#FFF9F2] to-[#D69527];
   }
-  
-.slick-slide > div{
+}
+
+.slick-slide > div {
   margin: 0 20px;
 }
