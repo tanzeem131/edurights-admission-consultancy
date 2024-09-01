@@ -18,7 +18,7 @@ function App() {
       <Service />
       <Course />
       <Review />
-      {/* <ContactUs /> */}
+      <ContactUs />
       <Footer />
       <Modal />
     </div>

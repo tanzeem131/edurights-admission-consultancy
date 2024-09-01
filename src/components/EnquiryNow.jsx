@@ -1,10 +1,7 @@
 import React, { useState } from "react";
-import { API_KEY } from "../utils/constants";
 
 const Modal = () => {
   const [showModal, setShowModal] = useState(false);
-
-  const apiUrl = API_KEY;
 
   const [formData, setFormData] = useState({
     full_name: "",
@@ -24,12 +21,14 @@ const Modal = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch(apiUrl, {
+    console.log("Form data before submission:", formData);
+
+    fetch("http://localhost:5000/api/enquiry/submit", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ data: formData }),
+      body: JSON.stringify(formData),
     })
       .then((res) => {
         if (res.status === 201) {
@@ -86,6 +85,7 @@ const Modal = () => {
                     </label>
                     <input
                       name="full_name"
+                      id="full_name"
                       value={formData.full_name}
                       onChange={handleChange}
                       required
@@ -96,6 +96,7 @@ const Modal = () => {
                     </label>
                     <input
                       name="email_id"
+                      id="email_id"
                       value={formData.email_id}
                       onChange={handleChange}
                       required
@@ -106,6 +107,7 @@ const Modal = () => {
                     </label>
                     <input
                       name="address"
+                      id="address"
                       value={formData.address}
                       onChange={handleChange}
                       required
@@ -116,6 +118,7 @@ const Modal = () => {
                     </label>
                     <input
                       name="contact_no"
+                      id="contact_no"
                       value={formData.contact_no}
                       onChange={handleChange}
                       required
@@ -126,6 +129,7 @@ const Modal = () => {
                     </label>
                     <input
                       name="message"
+                      id="message"
                       value={formData.message}
                       onChange={handleChange}
                       required
