@@ -30,6 +30,7 @@ const Review = () => {
       review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
     },
   ];
+
   const settings = {
     dots: true,
     infinite: true,
@@ -43,58 +44,51 @@ const Review = () => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-          initialSlide: 2,
           infinite: true,
           dots: true,
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 768,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          initialSlide: 1,
-        },
-      },
-      {
-        breakpoint: 340,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          initialSlide: 1,
           infinite: true,
         },
       },
     ],
   };
+
   return (
-    <div className="lg:my-20 md:my-20 sm:my-10 vs:my-10">
-      <div className="text-center font-bold lg:text-6xl md:text-6xl sm:text-3xl vs:text-3xl">
+    <div className="lg:my-20 md:my-16 sm:my-10 vs:my-20 max-w-full overflow-hidden">
+      <div className="text-center font-bold lg:text-6xl md:text-5xl sm:text-3xl vs:text-2xl">
         <p className="border-[#D69527] border-4 border-l-0 border-r-0 w-fit p-2 mx-auto">
           Our Trusted Alumni ❤️
         </p>
       </div>
-      <div className="w-3/4 m-auto">
-        <div className="lg:mt-20 md:mt-20 sm:mt-10 vs:mt-5">
+      <div className="w-10/12 lg:w-3/4 m-auto">
+        <div className="lg:mt-16 md:mt-14 sm:mt-10 vs:mt-8">
           <Slider {...settings}>
             {data.map((d) => (
               <div
                 key={d.name}
-                className="bg-white h-fit text-black rounded-xl"
+                className="bg-white h-fit text-black rounded-xl shadow-lg"
               >
                 <div className="h-64 bg-[#FFF9F2] flex justify-center items-center rounded-t-xl py-5 px-2">
                   <img
                     src={d.img}
-                    alt=""
+                    alt={d.name}
                     className="h-44 w-44 object-cover rounded-full"
                   />
                 </div>
                 <div className="flex flex-col items-center justify-center gap-4 p-4">
-                  <p className="lg:text-xl md:text-xl sm:text-xl font-semibold vs:text-lg">
+                  <p className="lg:text-xl md:text-lg sm:text-md font-semibold vs:text-sm">
                     {d.name}
                   </p>
-                  <p className="text-justify vs:text-sm">{d.review}</p>
-                  <button className="bg-blue-500 text-white text-lg px-6 py-1 rounded-xl">
+                  <p className="text-justify lg:text-sm md:text-sm vs:text-xs">
+                    {d.review}
+                  </p>
+                  <button className="bg-blue-500 text-white text-lg px-6 py-1 rounded-xl hover:bg-blue-600 transition">
                     Read More
                   </button>
                 </div>

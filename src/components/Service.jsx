@@ -24,7 +24,7 @@ const serviceArr = [
 
 const ServiceCard = ({ title, details, img }) => {
   return (
-    <div className="block rounded-lg mb-10 bg-black">
+    <div className="block rounded-lg my-5 bg-black">
       <TERipple>
         <div className="relative overflow-hidden bg-cover bg-no-repeat">
           <img className="rounded-t-lg" src={img} alt="" />
@@ -55,11 +55,11 @@ const ServiceCard = ({ title, details, img }) => {
 
 const Service = () => {
   return (
-    <div>
-      <div className="md:text-6xl lg:text-6xl font-bold text-center mt-10 md:mb-20 sm:mb-15 vs:text-3xl vs:mb-5 sm:text-3xl border-[#D69527] border-4 border-l-0 border-r-0 w-fit mx-auto p-2">
+    <div className="mt-20">
+      <div className="md:text-6xl lg:text-6xl font-bold text-center mt-10 md:mb-20 sm:mt-15 vs:text-3xl vs:mt-5 sm:text-3xl border-[#D69527] border-4 border-l-0 border-r-0 w-fit mx-auto p-2">
         Services
       </div>
-      <div className="flex md:flex-nowrap lg:flex-nowrap sm:flex-wrap vs:flex-wrap md:w-[80%] mx-auto md:gap-16 vs:gap-4 vs:w-[70%]">
+      <div className="flex md:flex-nowrap lg:flex-nowrap sm:flex-wrap vs:flex-wrap md:w-[80%] mx-auto md:gap-16 lg:gap-16 sm:gap-0 vs:gap-0 mt-5 sm:w-[80%] vs:w-[75%]">
         {serviceArr.map((service, index) => (
           <ServiceCard
             key={index}

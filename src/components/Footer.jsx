@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <div className="bg-black text-white vs:text-sm h-80 p-4">
-      <div className="grid grid-cols-12 justify-evenly">
+      <div className="grid grid-cols-12 justify-evenly h-5/6">
         <div className="my-1 py-1 col-span-4">
           <p>
             &copy; 2024 edurights admission consultancy. All rights reserved.
@@ -54,6 +54,9 @@ const Footer = () => {
             </a>
           </div>
         </div>
+      </div>
+      <div className="text-center pt-1 border-t border-gray-700 h-1/6">
+        <p className="text-sm">Designed & Developed By Tanzeem</p>
       </div>
     </div>
   );
