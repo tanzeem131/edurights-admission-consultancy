@@ -12,10 +12,10 @@ const About = () => {
         />
       </div>
       <div className="w-full md:w-6/12">
-        <h2 className="font-bold md:text-6xl my-5 mx-auto sm:text-3xl vs:text-3xl border-[#D69527] border-4 border-l-0 border-r-0 w-fit p-2">
+        <h2 className="font-bold md:text-6xl my-5 mx-auto sm:text-3xl vs:text-2xl border-[#D69527] border-4 border-l-0 border-r-0 w-fit p-2">
           About Us
         </h2>
-        <p className="rounded-lg text-lg md:text-2xl text-justify md:text-left vs:text-sm px-6 sm:px-2 py-2 sm:py-2 bg-[#D69527]">
+        <p className="rounded-lg text-lg md:text-2xl text-justify md:text-left vs:text-sm px-6 sm:px-2 py-2 vs:py-0">
           Introducing Edurights Admission Consultancy, your trusted partner in
           educational advancement. With a steadfast presence of 5 years,
           Edurights specializes in facilitating admissions primarily for

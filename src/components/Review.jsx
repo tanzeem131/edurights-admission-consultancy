@@ -88,9 +88,6 @@ const Review = () => {
                   <p className="text-justify lg:text-sm md:text-sm vs:text-xs">
                     {d.review}
                   </p>
-                  <button className="bg-blue-500 text-white text-lg px-6 py-1 rounded-xl hover:bg-blue-600 transition">
-                    Read More
-                  </button>
                 </div>
               </div>
             ))}

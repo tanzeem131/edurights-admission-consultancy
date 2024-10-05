@@ -11,11 +11,11 @@ import img3 from "../image/Aim.png";
 const Slider = () => {
   const images = [img1, img2, img3];
   return (
-    <section className="max-w-[80%] h-auto mx-auto my-[100px] vs:p-0 vs:mb-0 sm:max-w-[95%] vs:max-w-[95%]">
+    <section className="max-w-[80%] h-auto mx-auto my-[100px] vs:p-0 vs:mb-0 sm:max-w-[95%] vs:max-w-[100%]">
       <Swiper
         modules={[Autoplay, A11y]}
-        spaceBetween={30} // Adjust the spacing as needed
-        slidesPerView={1} // Show only one slide by default
+        spaceBetween={30}
+        slidesPerView={1}
         autoplay
       >
         {images.map((img, index) => (
@@ -24,7 +24,7 @@ const Slider = () => {
               <img
                 src={img}
                 alt={`slide-${index + 1}`}
-                className="max-w-[85%] md:h-[820px] mx-auto py-2 vs:py-0 vs:max-w-[100%] vs:mt-2 vs:h-auto sm:max-w-[95%] sm:py-0 "
+                className="max-w-[85%] md:h-[820px] mx-auto py-2 vs:py-0 vs:max-w-[100%] vs:mt-2 vs:h-[40vh] sm:max-w-[95%] sm:py-0 "
               />
             </a>
           </SwiperSlide>

@@ -1,24 +1,27 @@
 import React from "react";
 import { TERipple } from "tw-elements-react";
+import img1 from "../image/scholarshipposter.png";
+import img2 from "../image/4.png";
+import img3 from "../image/e-kalyan.png";
 
 const serviceArr = [
   {
-    title: "Card title",
+    title: "Scholarship Guidance",
     details:
-      "Some quick example text to build on the card title and make up the bulk of the card's content.",
-    img: "https://tecdn.b-cdn.net/img/new/standard/nature/186.jpg",
+      "Personalized help in finding and applying for scholarships, providing an eligibility checker.",
+    img: img1,
   },
   {
-    title: "Card title",
+    title: "Low-Fee College Recommendations",
     details:
-      "Some quick example text to build on the card title and make up the bulk of the card's content.",
-    img: "https://tecdn.b-cdn.net/img/new/standard/nature/186.jpg",
+      "Guidance on finding affordable colleges, offering comparison tools, admission overviews, and counseling.",
+    img: img2,
   },
   {
-    title: "Card title",
+    title: "Financial Aid Counseling",
     details:
-      "Some quick example text to build on the card title and make up the bulk of the card's content.",
-    img: "https://tecdn.b-cdn.net/img/new/standard/nature/186.jpg",
+      "Support for navigating grants, loans, and tuition waivers with budgeting tools and application assistance.",
+    img: img3,
   },
 ];
 
@@ -43,7 +46,7 @@ const ServiceCard = ({ title, details, img }) => {
         <TERipple>
           <button
             type="button"
-            className="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+            className="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white bg-yellow-400"
           >
             Button
           </button>
@@ -56,7 +59,7 @@ const ServiceCard = ({ title, details, img }) => {
 const Service = () => {
   return (
     <div className="mt-20">
-      <div className="md:text-6xl lg:text-6xl font-bold text-center mt-10 md:mb-20 sm:mt-15 vs:text-3xl vs:mt-5 sm:text-3xl border-[#D69527] border-4 border-l-0 border-r-0 w-fit mx-auto p-2">
+      <div className="md:text-6xl lg:text-6xl font-bold text-center mt-10 md:mb-20 sm:mt-15 vs:text-2xl vs:mt-5 sm:text-3xl border-[#D69527] border-4 border-l-0 border-r-0 w-fit mx-auto p-2">
         Services
       </div>
       <div className="flex md:flex-nowrap lg:flex-nowrap sm:flex-wrap vs:flex-wrap md:w-[80%] mx-auto md:gap-16 lg:gap-16 sm:gap-0 vs:gap-0 mt-5 sm:w-[80%] vs:w-[75%]">

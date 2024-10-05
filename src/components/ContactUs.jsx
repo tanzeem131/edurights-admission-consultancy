@@ -17,7 +17,7 @@ const ContactUs = () => {
         </div>
 
         <div class="flex justify-center items-start md:items-center font-bold">
-          <div class="text-base md:text-lg w-full md:w-3/4 space-y-4 bg-transparent sm:bg-[#D69527] p-0 rounded-lg sm:p-4">
+          <div class="text-base md:text-lg w-full md:w-3/4 space-y-4 bg-transparent p-0 rounded-lg sm:p-4">
             <div class=" text-black flex gap-2 items-center ml-2 sm:ml-0">
               <div class=" text-xl rounded-full bg-red-700 sm:text-4xl w-fit p-3 sm:p-2">
                 <BiMap />

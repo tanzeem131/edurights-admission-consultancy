@@ -6,6 +6,7 @@ import Service from "./components/Service.jsx";
 import Course from "./components/Course.jsx";
 import Review from "./components/Review.jsx";
 import Modal from "./components/EnquiryNow.jsx";
+import ImageSlider from "./components/Gallery.jsx";
 import ContactUs from "./components/ContactUs.jsx";
 import Footer from "./components/Footer.jsx";
 
@@ -17,6 +18,7 @@ function App() {
       <About />
       <Service />
       <Course />
+      <ImageSlider />
       <Review />
       <ContactUs />
       <Footer />
