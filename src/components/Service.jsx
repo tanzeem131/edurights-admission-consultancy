@@ -27,9 +27,15 @@ const serviceArr = [
 
 const ServiceCard = ({ title, details, img }) => {
   return (
-    <div className="block rounded-lg my-5 bg-black">
+    <div
+      className="block rounded-lg my-5 bg-black shadow-3d-card transition-shadow duration-300 hover:shadow-3d-card-hover"
+      style={{
+        boxShadow:
+          "0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19)", // Basic 3D shadow
+      }}
+    >
       <TERipple>
-        <div className="relative overflow-hidden bg-cover bg-no-repeat">
+        <div className="relative overflow-hidden bg-cover bg-no-repeat rounded-t-lg">
           <img className="rounded-t-lg" src={img} alt="" />
           <a href="#!">
             <div className="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
@@ -48,7 +54,7 @@ const ServiceCard = ({ title, details, img }) => {
             type="button"
             className="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white bg-yellow-400"
           >
-            Button
+            Know More
           </button>
         </TERipple>
       </div>

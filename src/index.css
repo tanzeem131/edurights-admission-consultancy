@@ -11,3 +11,10 @@
 .slick-slide > div {
   margin: 0 20px;
 }
+
+.shadow-3d-map {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+}
+.shadow-3d-map-hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 10px 30px rgba(0, 0, 0, 0.22);
+}
