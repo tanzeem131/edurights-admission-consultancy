@@ -1,6 +1,6 @@
-import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
 const Review = () => {
   const data = [
@@ -34,10 +34,16 @@ const Review = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    initialSlide: 0,
+    autoplay: true,
+    speed: 3000,
+    autoplaySpeed: 3000,
+    cssEase: "linear",
+    pauseOnHover: true,
+    pauseOnDotsHover: true,
+    swipeToSlide: true,
+    draggable: true,
     responsive: [
       {
         breakpoint: 1024,
