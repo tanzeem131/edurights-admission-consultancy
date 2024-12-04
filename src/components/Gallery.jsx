@@ -22,31 +22,43 @@ const ImageSlider = () => {
   }, []);
 
   return (
-    <div className="w-full max-w-screen-lg mx-auto my-40 overflow-hidden relative">
+    <div className="w-full max-w-screen-lg mx-auto my-40 relative overflow-hidden py-40">
+      {/* Background Image */}
       <div
-        className="flex transition-transform duration-500"
-        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-      >
-        {images.map((img, index) => (
-          <div key={index} className="flex-none w-full h-[60vh]">
-            <img
-              src={img}
-              alt={`Slide ${index + 1}`}
-              className="w-full h-full object-scale-down"
+        className="absolute inset-0 bg-cover bg-center"
+        style={{
+          backgroundImage: `url(https://plus.unsplash.com/premium_photo-1697729447666-c39f50d595ea?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)`,
+          opacity: 0.2, // Set the opacity for the background image
+        }}
+      ></div>
+
+      {/* Image Slider */}
+      <div className="relative z-10">
+        <div
+          className="flex transition-transform duration-500"
+          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        >
+          {images.map((img, index) => (
+            <div key={index} className="flex-none w-full h-[60vh]">
+              <img
+                src={img}
+                alt={`Slide ${index + 1}`}
+                className="w-full h-full object-scale-down"
+              />
+            </div>
+          ))}
+        </div>
+        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex space-x-2 mb-4">
+          {images.map((_, index) => (
+            <button
+              key={index}
+              className={`w-3 h-3 rounded-full ${
+                currentIndex === index ? "bg-yellow-400" : "bg-gray-300"
+              }`}
+              onClick={() => setCurrentIndex(index)}
             />
-          </div>
-        ))}
-      </div>
-      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex space-x-2 mb-4">
-        {images.map((_, index) => (
-          <button
-            key={index}
-            className={`w-3 h-3 rounded-full ${
-              currentIndex === index ? "bg-yellow-400" : "bg-gray-300"
-            }`}
-            onClick={() => setCurrentIndex(index)}
-          />
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );
