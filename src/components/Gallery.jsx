@@ -5,6 +5,7 @@ import img3 from "../image/3.png";
 import img4 from "../image/3.1.png";
 import img5 from "../image/4.png";
 import img6 from "../image/scholarshipposter.png";
+import img7 from "../image/bg-img.avif";
 
 const images = [img6, img1, img2, img3, img4, img5];
 
@@ -27,7 +28,7 @@ const ImageSlider = () => {
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: `url(https://plus.unsplash.com/premium_photo-1697729447666-c39f50d595ea?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)`,
+          backgroundImage: `url(${img7})`,
           opacity: 0.2, // Set the opacity for the background image
         }}
       ></div>
