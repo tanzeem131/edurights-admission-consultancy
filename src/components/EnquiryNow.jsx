@@ -23,7 +23,7 @@ const Modal = () => {
     e.preventDefault();
     console.log("Form data before submission:", formData);
 
-    fetch("http://localhost:5000/api/enquiry/submit", {
+    fetch("https://edurights-backend-1.onrender.com/api/enquiry/submit", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -5,29 +5,29 @@ import Slider from "react-slick";
 const Review = () => {
   const data = [
     {
-      name: `John Morgan`,
+      name: `Aarav Sharma`,
       img: `https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1636,h_2562,f_auto/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/z6glglaefbk5q6pgl5vt/Kaohsiung%EF%BD%9CDasanyuanPhotography%EF%BD%9CKoreanpassportphotosimagephoto-KlookPhilippines.jpg`,
-      review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
+      review: `I got admission to my dream university with their guidance. The counselors are very supportive and provided me with step-by-step assistance.`,
     },
     {
-      name: `Ellie Anderson`,
+      name: `Ishita Verma`,
       img: `https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1636,h_2562,f_auto/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/z6glglaefbk5q6pgl5vt/Kaohsiung%EF%BD%9CDasanyuanPhotography%EF%BD%9CKoreanpassportphotosimagephoto-KlookPhilippines.jpg`,
-      review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
+      review: `Their team helped me shortlist universities based on my profile. Thanks to them, I secured admission with a scholarship.`,
     },
     {
-      name: `Nia Adebayo`,
+      name: `Rohan Gupta`,
       img: `https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1636,h_2562,f_auto/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/z6glglaefbk5q6pgl5vt/Kaohsiung%EF%BD%9CDasanyuanPhotography%EF%BD%9CKoreanpassportphotosimagephoto-KlookPhilippines.jpg`,
-      review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
+      review: `The admission process was overwhelming, but their expert guidance made it so much easier. Highly recommended for aspiring students!`,
     },
     {
-      name: `Rigo Louie`,
+      name: `Priya Nair`,
       img: `https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1636,h_2562,f_auto/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/z6glglaefbk5q6pgl5vt/Kaohsiung%EF%BD%9CDasanyuanPhotography%EF%BD%9CKoreanpassportphotosimagephoto-KlookPhilippines.jpg`,
-      review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
+      review: `The team provided me with excellent support, from filling out applications to interview preparation. I am so grateful for their help.`,
     },
     {
-      name: `Mia Williams`,
+      name: `Aditya Mehta`,
       img: `https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1636,h_2562,f_auto/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/z6glglaefbk5q6pgl5vt/Kaohsiung%EF%BD%9CDasanyuanPhotography%EF%BD%9CKoreanpassportphotosimagephoto-KlookPhilippines.jpg`,
-      review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
+      review: `Thanks to their guidance, I got into one of the top colleges in India. The counselors were patient and very knowledgeable.`,
     },
   ];
 
