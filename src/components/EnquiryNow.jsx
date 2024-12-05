@@ -136,7 +136,7 @@ const Modal = () => {
                       className="shadow appearance-none border rounded w-full py-2 px-1 text-black"
                     />
                     <button
-                      className="text-white bg-yellow-500 active:bg-yellow-700 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
+                      className="text-white my-2 bg-yellow-500 active:bg-yellow-700 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
                       type="submit"
                     >
                       Submit

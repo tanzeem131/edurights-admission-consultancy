@@ -6,27 +6,27 @@ const Review = () => {
   const data = [
     {
       name: `Aarav Sharma`,
-      img: `https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1636,h_2562,f_auto/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/z6glglaefbk5q6pgl5vt/Kaohsiung%EF%BD%9CDasanyuanPhotography%EF%BD%9CKoreanpassportphotosimagephoto-KlookPhilippines.jpg`,
+      img: `https://png.pngtree.com/png-vector/20191110/ourmid/pngtree-avatar-icon-profile-icon-member-login-vector-isolated-png-image_1978396.jpg`,
       review: `I got admission to my dream university with their guidance. The counselors are very supportive and provided me with step-by-step assistance.`,
     },
     {
       name: `Ishita Verma`,
-      img: `https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1636,h_2562,f_auto/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/z6glglaefbk5q6pgl5vt/Kaohsiung%EF%BD%9CDasanyuanPhotography%EF%BD%9CKoreanpassportphotosimagephoto-KlookPhilippines.jpg`,
+      img: `https://png.pngtree.com/png-vector/20191110/ourmid/pngtree-avatar-icon-profile-icon-member-login-vector-isolated-png-image_1978396.jpg`,
       review: `Their team helped me shortlist universities based on my profile. Thanks to them, I secured admission with a scholarship.`,
     },
     {
       name: `Rohan Gupta`,
-      img: `https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1636,h_2562,f_auto/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/z6glglaefbk5q6pgl5vt/Kaohsiung%EF%BD%9CDasanyuanPhotography%EF%BD%9CKoreanpassportphotosimagephoto-KlookPhilippines.jpg`,
+      img: `https://png.pngtree.com/png-vector/20191110/ourmid/pngtree-avatar-icon-profile-icon-member-login-vector-isolated-png-image_1978396.jpg`,
       review: `The admission process was overwhelming, but their expert guidance made it so much easier. Highly recommended for aspiring students!`,
     },
     {
       name: `Priya Nair`,
-      img: `https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1636,h_2562,f_auto/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/z6glglaefbk5q6pgl5vt/Kaohsiung%EF%BD%9CDasanyuanPhotography%EF%BD%9CKoreanpassportphotosimagephoto-KlookPhilippines.jpg`,
+      img: `https://png.pngtree.com/png-vector/20191110/ourmid/pngtree-avatar-icon-profile-icon-member-login-vector-isolated-png-image_1978396.jpg`,
       review: `The team provided me with excellent support, from filling out applications to interview preparation. I am so grateful for their help.`,
     },
     {
       name: `Aditya Mehta`,
-      img: `https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1636,h_2562,f_auto/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/z6glglaefbk5q6pgl5vt/Kaohsiung%EF%BD%9CDasanyuanPhotography%EF%BD%9CKoreanpassportphotosimagephoto-KlookPhilippines.jpg`,
+      img: `https://png.pngtree.com/png-vector/20191110/ourmid/pngtree-avatar-icon-profile-icon-member-login-vector-isolated-png-image_1978396.jpg`,
       review: `Thanks to their guidance, I got into one of the top colleges in India. The counselors were patient and very knowledgeable.`,
     },
   ];
