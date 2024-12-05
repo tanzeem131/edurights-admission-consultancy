@@ -24,23 +24,20 @@ const ImageSlider = () => {
 
   return (
     <div className="w-full max-w-screen-lg mx-auto my-40 relative overflow-hidden py-40">
-      {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
           backgroundImage: `url(${img7})`,
-          opacity: 0.2, // Set the opacity for the background image
+          opacity: 0.2,
         }}
       ></div>
-
-      {/* Image Slider */}
       <div className="relative z-10">
         <div
           className="flex transition-transform duration-500"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
           {images.map((img, index) => (
-            <div key={index} className="flex-none w-full h-[60vh]">
+            <div key={index} className="flex-none w-full h-[70vh] px-2">
               <img
                 src={img}
                 alt={`Slide ${index + 1}`}

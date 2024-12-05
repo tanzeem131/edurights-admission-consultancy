@@ -1,36 +1,9 @@
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import { data } from "../utils/utils";
 
 const Review = () => {
-  const data = [
-    {
-      name: `Aarav Sharma`,
-      img: `https://png.pngtree.com/png-vector/20191110/ourmid/pngtree-avatar-icon-profile-icon-member-login-vector-isolated-png-image_1978396.jpg`,
-      review: `I got admission to my dream university with their guidance. The counselors are very supportive and provided me with step-by-step assistance.`,
-    },
-    {
-      name: `Ishita Verma`,
-      img: `https://png.pngtree.com/png-vector/20191110/ourmid/pngtree-avatar-icon-profile-icon-member-login-vector-isolated-png-image_1978396.jpg`,
-      review: `Their team helped me shortlist universities based on my profile. Thanks to them, I secured admission with a scholarship.`,
-    },
-    {
-      name: `Rohan Gupta`,
-      img: `https://png.pngtree.com/png-vector/20191110/ourmid/pngtree-avatar-icon-profile-icon-member-login-vector-isolated-png-image_1978396.jpg`,
-      review: `The admission process was overwhelming, but their expert guidance made it so much easier. Highly recommended for aspiring students!`,
-    },
-    {
-      name: `Priya Nair`,
-      img: `https://png.pngtree.com/png-vector/20191110/ourmid/pngtree-avatar-icon-profile-icon-member-login-vector-isolated-png-image_1978396.jpg`,
-      review: `The team provided me with excellent support, from filling out applications to interview preparation. I am so grateful for their help.`,
-    },
-    {
-      name: `Aditya Mehta`,
-      img: `https://png.pngtree.com/png-vector/20191110/ourmid/pngtree-avatar-icon-profile-icon-member-login-vector-isolated-png-image_1978396.jpg`,
-      review: `Thanks to their guidance, I got into one of the top colleges in India. The counselors were patient and very knowledgeable.`,
-    },
-  ];
-
   const settings = {
     dots: true,
     infinite: true,

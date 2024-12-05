@@ -31,13 +31,14 @@ const About = () => {
           Introducing Edurights Admission Consultancy, your trusted partner in
           educational advancement. With a steadfast presence of 5 years,
           Edurights specializes in facilitating admissions primarily for
-          Management, Nursing, Engineering, B.Ed, D.El.Ed courses. We understand
-          the pivotal role education plays in shaping careers and futures. Our
-          dedicated team of experts strives to ensure seamless admission
-          processes, providing personalized guidance tailored to each student's
-          aspirations. Whether you're embarking on your journey into teaching or
-          pursuing engineering excellence, Edurights Admission Consultancy is
-          here to navigate you towards a successful academic path.
+          Management, Nursing, Medical, Engineering, B.Ed, Diploma courses. We
+          understand the pivotal role education plays in shaping careers and
+          futures. Our dedicated team of experts strives to ensure seamless
+          admission processes, providing personalized guidance tailored to each
+          student's aspirations. Whether you're embarking on your journey into
+          teaching or pursuing engineering excellence, Edurights Admission
+          Consultancy is here to navigate you towards a successful academic
+          path.
         </p>
       </div>
     </div>

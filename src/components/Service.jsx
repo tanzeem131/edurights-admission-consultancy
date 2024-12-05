@@ -1,29 +1,6 @@
 import React from "react";
 import { TERipple } from "tw-elements-react";
-import img1 from "../image/scholarshipposter.png";
-import img2 from "../image/4.png";
-import img3 from "../image/e-kalyan.png";
-
-const serviceArr = [
-  {
-    title: "Scholarship Guidance",
-    details:
-      "Personalized help in finding and applying for scholarships, providing an eligibility checker.",
-    img: img1,
-  },
-  {
-    title: "Low-Fee College Recommendations",
-    details:
-      "Guidance on finding affordable colleges, offering comparison tools, admission overviews, and counseling.",
-    img: img2,
-  },
-  {
-    title: "Financial Aid Counseling",
-    details:
-      "Support for navigating grants, loans, and tuition waivers with budgeting tools and application assistance.",
-    img: img3,
-  },
-];
+import { serviceArr } from "../utils/utils";
 
 const ServiceCard = ({ title, details, img }) => {
   return (
@@ -31,7 +8,7 @@ const ServiceCard = ({ title, details, img }) => {
       className="block rounded-lg my-5 bg-black shadow-3d-card transition-shadow duration-300 hover:shadow-3d-card-hover"
       style={{
         boxShadow:
-          "0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19)", // Basic 3D shadow
+          "0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19)",
       }}
     >
       <TERipple>

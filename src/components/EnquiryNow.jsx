@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import DOMPurify from "dompurify";
 
 const Modal = () => {
   const [showModal, setShowModal] = useState(false);
@@ -21,14 +22,21 @@ const Modal = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form data before submission:", formData);
+
+    const sanitizedData = {
+      full_name: DOMPurify.sanitize(formData.full_name),
+      email_id: DOMPurify.sanitize(formData.email_id),
+      address: DOMPurify.sanitize(formData.address),
+      contact_no: DOMPurify.sanitize(formData.contact_no),
+      message: DOMPurify.sanitize(formData.message),
+    };
 
     fetch("https://edurights-backend-1.onrender.com/api/enquiry/submit", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(formData),
+      body: JSON.stringify(sanitizedData),
     })
       .then((res) => {
         if (res.status === 201) {
@@ -81,7 +89,8 @@ const Modal = () => {
                     className="bg-gray-200 shadow-md rounded px-8 pt-6 pb-8 w-full"
                   >
                     <label className="block text-black text-sm font-bold mb-1">
-                      Full Name
+                      Name
+                      <span className="text-red-600 animate-ping">*</span>
                     </label>
                     <input
                       name="full_name"
@@ -89,10 +98,13 @@ const Modal = () => {
                       value={formData.full_name}
                       onChange={handleChange}
                       required
+                      minLength={2}
+                      maxLength={20}
                       className="shadow appearance-none border rounded w-full py-2 px-1 text-black"
                     />
                     <label className="block text-black text-sm font-bold mb-1">
                       Email Id
+                      <span className="text-red-600 animate-ping">*</span>
                     </label>
                     <input
                       name="email_id"
@@ -100,6 +112,9 @@ const Modal = () => {
                       value={formData.email_id}
                       onChange={handleChange}
                       required
+                      type="email"
+                      minLength={11}
+                      maxLength={30}
                       className="shadow appearance-none border rounded w-full py-2 px-1 text-black"
                     />
                     <label className="block text-black text-sm font-bold mb-1">
@@ -110,11 +125,16 @@ const Modal = () => {
                       id="address"
                       value={formData.address}
                       onChange={handleChange}
-                      required
+                      minLength={5}
+                      maxLength={100}
                       className="shadow appearance-none border rounded w-full py-2 px-1 text-black"
                     />
                     <label className="block text-black text-sm font-bold mb-1">
                       Contact No.
+                      <span className="text-red-600 animate-ping">*</span>
+                      <span className="text-[8px] mx-2 bg-red-600 p-1 rounded-full">
+                        No SPAM calls
+                      </span>
                     </label>
                     <input
                       name="contact_no"
@@ -122,6 +142,10 @@ const Modal = () => {
                       value={formData.contact_no}
                       onChange={handleChange}
                       required
+                      type="tel"
+                      pattern="^\d{10}$"
+                      minLength={10}
+                      maxLength={15}
                       className="shadow appearance-none border rounded w-full py-2 px-1 text-black"
                     />
                     <label className="block text-black text-sm font-bold mb-1">
@@ -132,7 +156,7 @@ const Modal = () => {
                       id="message"
                       value={formData.message}
                       onChange={handleChange}
-                      required
+                      maxLength={50}
                       className="shadow appearance-none border rounded w-full py-2 px-1 text-black"
                     />
                     <button
