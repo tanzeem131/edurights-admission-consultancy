@@ -14,7 +14,9 @@ const Slider = () => {
   return (
     <div>
       <div className="max-w-[80%] h-auto mx-auto my-[100px] vs:p-0 vs:mb-0 sm:max-w-[95%] vs:max-w-[100%]">
-        <Notification />
+        <div className="sm:mx-9 mx-0 ">
+          <Notification />
+        </div>
         <Swiper
           modules={[Autoplay, A11y]}
           spaceBetween={30}
