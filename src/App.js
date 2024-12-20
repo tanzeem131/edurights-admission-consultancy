@@ -3,6 +3,7 @@ import React, { Suspense, useState } from "react";
 import Header from "./components/Header.jsx";
 import Slider from "./components/Slider.jsx";
 import { useInView } from "react-intersection-observer";
+import { BeatLoader } from "react-spinners";
 
 const Review = React.lazy(() => import("./components/Review.jsx"));
 const About = React.lazy(() => import("./components/About.jsx"));
@@ -65,10 +66,6 @@ function App() {
     triggerOnce: true,
     threshold: 0.5,
   });
-  const { ref: modalRef, inView: modalInView } = useInView({
-    triggerOnce: true,
-    threshold: 0.5,
-  });
 
   React.useEffect(() => {
     handleVisibilityChange("review", reviewInView);
@@ -79,7 +76,6 @@ function App() {
     handleVisibilityChange("faq", faqInView);
     handleVisibilityChange("contactUs", contactUsInView);
     handleVisibilityChange("footer", footerInView);
-    handleVisibilityChange("modal", modalInView);
   }, [
     reviewInView,
     aboutInView,
@@ -89,7 +85,6 @@ function App() {
     faqInView,
     contactUsInView,
     footerInView,
-    modalInView,
   ]);
 
   return (
@@ -100,56 +95,102 @@ function App() {
       </div>
       <div id="about">
         <div ref={aboutRef}>
-          <Suspense fallback={<div>Loading About...</div>}>
+          <Suspense
+            fallback={
+              <div className="text-center text-3xl">
+                <BeatLoader />
+              </div>
+            }
+          >
             {visibleSections.about && <About />}
           </Suspense>
         </div>
       </div>
       <div id="service">
         <div ref={serviceRef}>
-          <Suspense fallback={<div>Loading Service...</div>}>
+          <Suspense
+            fallback={
+              <div className="text-center text-3xl">
+                <BeatLoader />
+              </div>
+            }
+          >
             {visibleSections.service && <Service />}
           </Suspense>
         </div>
       </div>
       <div id="course">
         <div ref={courseRef}>
-          <Suspense fallback={<div>Loading Course...</div>}>
+          <Suspense
+            fallback={
+              <div className="text-center text-3xl">
+                <BeatLoader />
+              </div>
+            }
+          >
             {visibleSections.course && <Course />}
           </Suspense>
         </div>
       </div>
       <div ref={imageSliderRef}>
-        <Suspense fallback={<div>Loading ImageSlider...</div>}>
+        <Suspense
+          fallback={
+            <div className="text-center text-3xl">
+              <BeatLoader />
+            </div>
+          }
+        >
           {visibleSections.imageSlider && <ImageSlider />}
         </Suspense>
       </div>
       <div ref={reviewRef}>
-        <Suspense fallback={<div>Loading Review...</div>}>
+        <Suspense
+          fallback={
+            <div className="text-center text-3xl">
+              <BeatLoader />
+            </div>
+          }
+        >
           {visibleSections.review && <Review />}
         </Suspense>
       </div>
       <div ref={faqRef}>
-        <Suspense fallback={<div>Loading FAQ...</div>}>
+        <Suspense
+          fallback={
+            <div className="text-center text-3xl">
+              <BeatLoader />
+            </div>
+          }
+        >
           {visibleSections.faq && <Faq />}
         </Suspense>
       </div>
       <div id="contact">
         <div ref={contactUsRef}>
-          <Suspense fallback={<div>Loading Contact Us...</div>}>
+          <Suspense
+            fallback={
+              <div className="text-center text-3xl">
+                <BeatLoader />
+              </div>
+            }
+          >
             {visibleSections.contactUs && <ContactUs />}
           </Suspense>
         </div>
       </div>
       <div ref={footerRef}>
-        <Suspense fallback={<div>Loading Footer...</div>}>
+        <Suspense
+          fallback={
+            <div className="text-center text-3xl">
+              <BeatLoader />
+            </div>
+          }
+        >
           {visibleSections.footer && <Footer />}
         </Suspense>
       </div>
-      <div ref={modalRef}>
-        <Suspense fallback={<div>Loading Modal...</div>}>
-          {visibleSections.modal && <Modal />}
-        </Suspense>
+      <div>
+        <Modal />
       </div>
     </div>
   );

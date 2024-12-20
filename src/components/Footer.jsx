@@ -3,15 +3,15 @@ import { googleapi } from "../utils/utils";
 
 const Footer = () => {
   return (
-    <div className="bg-[#F5F7F8] text-black vs:text-sm h-80 p-4">
+    <div className="bg-[#FFF9F2] text-black vs:text-sm h-80 p-4">
       <div className="grid grid-cols-12 justify-evenly h-5/6">
         <div className="my-1 py-1 col-span-5 font-sans">
           <p>
             &copy; 2024 edurights admission consultancy. All rights reserved.
           </p>
-          <div class="flex justify-start sm:p-0 p-4">
+          <div className="flex justify-start sm:p-0 p-4">
             <iframe
-              class="w-[70px] h-[70px] md:w-[30%] md:h-[150px] rounded-lg"
+              className="w-[70px] h-[70px] md:w-[30%] md:h-[150px] rounded-lg"
               title="location"
               src={googleapi}
               allowFullScreen=""

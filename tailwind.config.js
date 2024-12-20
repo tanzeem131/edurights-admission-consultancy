@@ -1,23 +1,27 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+        slide: "slide 20s linear infinite",
+      },
+      keyframes: {
+        slide: {
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+      },
+    },
     screens: {
-      'vs':'340px',
-      // => @media (min-width: 340px) { ... }
+      vs: "340px",
 
-      'sm': '576px',
-      // => @media (min-width: 576px) { ... }
+      sm: "576px",
 
-      'md': '960px',
-      // => @media (min-width: 960px) { ... }
+      md: "960px",
 
-      'lg': '1440px',
-      // => @media (min-width: 1440px) { ... }
+      lg: "1440px",
     },
   },
   plugins: [],
-}
+};

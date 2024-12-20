@@ -1,37 +1,23 @@
 import React, { useState } from "react";
 import DOMPurify from "dompurify";
+import { useForm } from "react-hook-form";
 
 const Modal = () => {
   const [showModal, setShowModal] = useState(false);
+  const { register, handleSubmit } = useForm();
 
-  const [formData, setFormData] = useState({
-    full_name: "",
-    email_id: "",
-    address: "",
-    contact_no: "",
-    message: "",
-  });
+  console.log("render or not");
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
+  const onSubmit = async (data) => {
     const sanitizedData = {
-      full_name: DOMPurify.sanitize(formData.full_name),
-      email_id: DOMPurify.sanitize(formData.email_id),
-      address: DOMPurify.sanitize(formData.address),
-      contact_no: DOMPurify.sanitize(formData.contact_no),
-      message: DOMPurify.sanitize(formData.message),
+      full_name: DOMPurify.sanitize(data.full_name),
+      email_id: DOMPurify.sanitize(data.email_id),
+      address: DOMPurify.sanitize(data.address),
+      contact_no: DOMPurify.sanitize(data.contact_no),
+      message: DOMPurify.sanitize(data.message),
     };
 
-    fetch("https://edurights-backend-1.onrender.com/api/enquiry/submit", {
+    await fetch("https://edurights-backend-1.onrender.com/api/enquiry/submit", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -85,7 +71,7 @@ const Modal = () => {
                 </div>
                 <div className="relative p-6 flex-auto">
                   <form
-                    onSubmit={handleSubmit}
+                    onSubmit={handleSubmit(onSubmit)}
                     className="bg-gray-200 shadow-md rounded px-8 pt-6 pb-8 w-full"
                   >
                     <label className="block text-black text-sm font-bold mb-1">
@@ -93,10 +79,8 @@ const Modal = () => {
                       <span className="text-red-600 animate-ping">*</span>
                     </label>
                     <input
-                      name="full_name"
+                      {...register("full_name")}
                       id="full_name"
-                      value={formData.full_name}
-                      onChange={handleChange}
                       required
                       minLength={2}
                       maxLength={20}
@@ -107,10 +91,8 @@ const Modal = () => {
                       <span className="text-red-600 animate-ping">*</span>
                     </label>
                     <input
-                      name="email_id"
+                      {...register("email_id")}
                       id="email_id"
-                      value={formData.email_id}
-                      onChange={handleChange}
                       required
                       type="email"
                       minLength={11}
@@ -121,10 +103,8 @@ const Modal = () => {
                       Address
                     </label>
                     <input
-                      name="address"
+                      {...register("address")}
                       id="address"
-                      value={formData.address}
-                      onChange={handleChange}
                       minLength={5}
                       maxLength={100}
                       className="shadow appearance-none border rounded w-full py-2 px-1 text-black"
@@ -137,10 +117,8 @@ const Modal = () => {
                       </span>
                     </label>
                     <input
-                      name="contact_no"
+                      {...register("contact_no")}
                       id="contact_no"
-                      value={formData.contact_no}
-                      onChange={handleChange}
                       required
                       type="tel"
                       pattern="^\d{10}$"
@@ -152,10 +130,8 @@ const Modal = () => {
                       Message
                     </label>
                     <input
-                      name="message"
+                      {...register("message")}
                       id="message"
-                      value={formData.message}
-                      onChange={handleChange}
                       maxLength={50}
                       className="shadow appearance-none border rounded w-full py-2 px-1 text-black"
                     />
@@ -185,4 +161,4 @@ const Modal = () => {
   );
 };
 
-export default Modal;
+export default React.memo(Modal);

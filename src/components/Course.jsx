@@ -1,32 +1,8 @@
 import React from "react";
-import {
-  FaUserDoctor,
-  FaUserNurse,
-  FaHotel,
-  FaBusinessTime,
-  FaComputer,
-} from "react-icons/fa6";
-import { MdEngineering, MdLocalPharmacy } from "react-icons/md";
-import { GiTreeBranch, GiDiploma } from "react-icons/gi";
-import { LiaChalkboardTeacherSolid } from "react-icons/lia";
-
-const courses = [
-  { name: "Polytechnic/Diploma", icon: GiDiploma },
-  { name: "B.tech/BE", icon: MdEngineering },
-  { name: "B.Ed", icon: LiaChalkboardTeacherSolid },
-  { name: "D.El.Ed", icon: LiaChalkboardTeacherSolid },
-  { name: "BBA", icon: FaBusinessTime },
-  { name: "BCA", icon: FaComputer },
-  { name: "B.Sc-Nursing", icon: FaUserNurse },
-  { name: "B.Pharma", icon: MdLocalPharmacy },
-  { name: "B.Sc-Agriculture", icon: GiTreeBranch },
-  { name: "MCA", icon: FaComputer },
-  { name: "Hotel Management", icon: FaHotel },
-  { name: "Medical", icon: FaUserDoctor },
-];
+import { courses } from "../utils/utils";
 
 const CourseButton = ({ name, Icon }) => (
-  <button className="btn md:h-[150px] lg:h-[150px] sm:h-[50px] vs:h-[50px] md:w-[350px] lg:w-[350px] sm:w-[200px] vs:w-[180px] text-3xl relative inline-flex items-center justify-start overflow-hidden transition-all bg-white rounded hover:bg-white group">
+  <button className="btn md:h-[150px] lg:h-[150px] sm:h-[50px] vs:h-[50px] md:w-[350px] lg:w-[350px] sm:w-[200px] vs:w-[160px] text-3xl relative inline-flex items-center justify-start overflow-hidden transition-all bg-white rounded hover:bg-white group">
     <span className="w-0 h-0 rounded bg-[#D69527] absolute top-0 left-0 ease-out duration-500 transition-all group-hover:w-full group-hover:h-full -z-1"></span>
     <span className="w-full text-black transition-colors vs:p-2 lg:text-3xl md:text-3xl sm:text-[17px] vs:text-[16px] duration-300 ease-in-out group-hover:text-white z-10">
       {name}

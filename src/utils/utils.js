@@ -2,6 +2,16 @@ import img from "../image/profileimg.jpg";
 import img1 from "../image/scholarshipposter.png";
 import img2 from "../image/4.png";
 import img3 from "../image/e-kalyan.png";
+import {
+  FaUserDoctor,
+  FaUserNurse,
+  FaHotel,
+  FaBusinessTime,
+  FaComputer,
+} from "react-icons/fa6";
+import { MdEngineering, MdLocalPharmacy } from "react-icons/md";
+import { GiTreeBranch, GiDiploma } from "react-icons/gi";
+import { LiaChalkboardTeacherSolid } from "react-icons/lia";
 
 export const serviceArr = [
   {
@@ -98,6 +108,21 @@ export const data = [
     img: `${img}`,
     review: `Thanks to their guidance, I got into one of the top colleges in India. The counselors were patient and very knowledgeable.`,
   },
+];
+
+export const courses = [
+  { name: "Polytechnic/Diploma", icon: GiDiploma },
+  { name: "B.tech/BE", icon: MdEngineering },
+  { name: "B.Ed", icon: LiaChalkboardTeacherSolid },
+  { name: "D.El.Ed", icon: LiaChalkboardTeacherSolid },
+  { name: "BBA", icon: FaBusinessTime },
+  { name: "BCA", icon: FaComputer },
+  { name: "B.Sc-Nursing", icon: FaUserNurse },
+  { name: "B.Pharma", icon: MdLocalPharmacy },
+  { name: "B.Sc-Agriculture", icon: GiTreeBranch },
+  { name: "MCA", icon: FaComputer },
+  { name: "Hotel Management", icon: FaHotel },
+  { name: "Medical", icon: FaUserDoctor },
 ];
 
 export const googleapi =

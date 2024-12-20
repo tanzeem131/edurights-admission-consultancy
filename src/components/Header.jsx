@@ -13,7 +13,7 @@ const Header = () => {
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
     }
-    setNav(false); // Close mobile menu after clicking
+    setNav(false);
   };
 
   const navItems = [
@@ -25,11 +25,10 @@ const Header = () => {
   ];
 
   return (
-    <div className="bg-[#F5F7F8] flex justify-between font-sans items-center h-24 mx-auto px-4 text-black fixed top-0 w-full z-50 vs:mb-0 vs:pb-0">
+    <div className="bg-[#FFF9F2] flex justify-between font-sans items-center h-24 mx-auto px-4 text-black fixed top-0 w-full z-50 vs:mb-0 vs:pb-0">
       <h1 className="w-full md:text-3xl font-bold text-[#D69527] uppercase sm:text-xl vs:text-xl">
         edurights admission consultancy
       </h1>
-
       <ul className="hidden md:flex">
         {navItems.map((item) => (
           <li
@@ -45,7 +44,6 @@ const Header = () => {
       <div onClick={handleNav} className="block md:hidden">
         {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
       </div>
-
       <ul
         className={
           nav
@@ -56,7 +54,6 @@ const Header = () => {
         <h1 className="w-full text-3xl font-bold text-[#D69527] m-4 sm:text-xl vs:text-xl">
           edurights admission consultancy
         </h1>
-
         {navItems.map((item) => (
           <li
             key={item.id}
