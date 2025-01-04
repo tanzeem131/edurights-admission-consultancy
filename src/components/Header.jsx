@@ -25,7 +25,7 @@ const Header = () => {
   ];
 
   return (
-    <div className="bg-[#FFF9F2] flex justify-between font-sans items-center h-24 mx-auto px-4 text-black fixed top-0 w-full z-50 vs:mb-0 vs:pb-0">
+    <div className="bg-[#FFEFD5] flex justify-between font-sans items-center h-24 mx-auto px-4 text-black fixed top-0 w-full z-50 vs:mb-0 vs:pb-0">
       <h1 className="w-full md:text-3xl font-bold text-[#D69527] uppercase sm:text-xl vs:text-xl">
         edurights admission consultancy
       </h1>
@@ -47,7 +47,7 @@ const Header = () => {
       <ul
         className={
           nav
-            ? "fixed md:hidden left-0 top-0 w-[60%] h-full border-r border-r-gray-900 bg-[#F5F7F8] ease-in-out duration-500"
+            ? "fixed md:hidden left-0 top-0 w-[60%] h-full border-r border-r-gray-900 bg-[#FFEFD5] ease-in-out duration-500"
             : "ease-in-out w-[60%] duration-500 fixed top-0 bottom-0 left-[-100%]"
         }
       >

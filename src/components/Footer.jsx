@@ -3,11 +3,12 @@ import { googleapi } from "../utils/utils";
 
 const Footer = () => {
   return (
-    <div className="bg-[#FFF9F2] text-black vs:text-sm h-80 p-4">
+    <div className="bg-[#FFEFD5] text-black vs:text-sm h-80 p-4">
       <div className="grid grid-cols-12 justify-evenly h-5/6">
         <div className="my-1 py-1 col-span-5 font-sans">
           <p>
-            &copy; 2024 edurights admission consultancy. All rights reserved.
+            &copy; {new Date().getFullYear()} edurights admission consultancy.
+            All rights reserved.
           </p>
           <div className="flex justify-start sm:p-0 p-4">
             <iframe
