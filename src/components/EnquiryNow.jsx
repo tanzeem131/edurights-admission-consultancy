@@ -4,11 +4,11 @@ import { useForm } from "react-hook-form";
 
 const Modal = () => {
   const [showModal, setShowModal] = useState(false);
-  const { register, handleSubmit } = useForm();
-
-  console.log("render or not");
+  const [isLoading, setIsLoading] = useState(false);
+  const { register, handleSubmit, reset } = useForm();
 
   const onSubmit = async (data) => {
+    setIsLoading(true);
     const sanitizedData = {
       full_name: DOMPurify.sanitize(data.full_name),
       email_id: DOMPurify.sanitize(data.email_id),
@@ -25,8 +25,10 @@ const Modal = () => {
       body: JSON.stringify(sanitizedData),
     })
       .then((res) => {
+        setIsLoading(false);
         if (res.status === 201) {
           alert("Form Data Submitted :)");
+          reset();
           setShowModal(false);
         } else {
           return res.json().then((data) => {
@@ -36,6 +38,7 @@ const Modal = () => {
         }
       })
       .catch((error) => {
+        setIsLoading(false);
         console.error("Fetch error:", error);
         alert("There was an error :(");
       });
@@ -76,7 +79,9 @@ const Modal = () => {
                   >
                     <label className="block text-black text-sm font-bold mb-1">
                       Name
-                      <span className="text-red-600 animate-ping">*</span>
+                      <span className="text-red-600 animate-pulse transform transition-transform duration-300 ease-in-out hover:scale-110">
+                        *
+                      </span>
                     </label>
                     <input
                       {...register("full_name")}
@@ -88,7 +93,9 @@ const Modal = () => {
                     />
                     <label className="block text-black text-sm font-bold mb-1">
                       Email Id
-                      <span className="text-red-600 animate-ping">*</span>
+                      <span className="text-red-600 animate-pulse transform transition-transform duration-300 ease-in-out hover:scale-110">
+                        *
+                      </span>
                     </label>
                     <input
                       {...register("email_id")}
@@ -111,7 +118,9 @@ const Modal = () => {
                     />
                     <label className="block text-black text-sm font-bold mb-1">
                       Contact No.
-                      <span className="text-red-600 animate-ping">*</span>
+                      <span className="text-red-600 animate-pulse transform transition-transform duration-300 ease-in-out hover:scale-110">
+                        *
+                      </span>
                       <span className="text-[8px] mx-2 bg-red-600 p-1 rounded-full">
                         No SPAM calls
                       </span>
@@ -139,7 +148,7 @@ const Modal = () => {
                       className="text-white my-2 bg-yellow-500 active:bg-yellow-700 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
                       type="submit"
                     >
-                      Submit
+                      {isLoading ? "Submitting..." : "Submit"}
                     </button>
                   </form>
                 </div>
